@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="IXFFeedCollectionViewItem">
+            <connections>
+                <outlet property="comments" destination="o5m-zd-lns" id="zFr-6q-LfT"/>
+                <outlet property="commentsButton" destination="pvV-D6-3xu" id="baD-HM-MMJ"/>
+                <outlet property="deleteButton" destination="HF2-vF-Wge" id="Jim-Bc-HkR"/>
+                <outlet property="imageView" destination="aJc-Yj-LQM" id="UZS-nL-n6L"/>
+                <outlet property="likeButton" destination="XVf-3K-HZq" id="s6f-0W-IAO"/>
+                <outlet property="likes" destination="hr4-0K-WKk" id="lW0-rP-K2L"/>
+                <outlet property="openWebButton" destination="zXk-g9-Vmq" id="eRg-5z-4Rp"/>
+                <outlet property="preview" destination="aJc-Yj-LQM" id="TQY-gd-9YR"/>
+                <outlet property="previewButton" destination="56L-Fe-ClW" id="EGG-Gr-y9h"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView focusRingType="none" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="251" alphaValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="aJc-Yj-LQM">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="aJc-Yj-LQM" secondAttribute="height" multiplier="1:1" id="acW-s0-pBR"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="proportionallyUpOrDown" id="uTG-dR-L00"/>
+                </imageView>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o5m-zd-lns">
+                    <rect key="frame" x="61" y="51" width="57" height="20"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" alignment="center" drawsBackground="YES" id="ZAf-vd-lSs">
+                        <font key="font" metaFont="system" size="17"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hr4-0K-WKk">
+                    <rect key="frame" x="61" y="79" width="57" height="20"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" alignment="center" drawsBackground="YES" id="SRk-Hd-Mlc">
+                        <font key="font" metaFont="system" size="17"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textFieldCell>
+                </textField>
+                <button hidden="YES" toolTip="Delete from Instagram" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HF2-vF-Wge">
+                    <rect key="frame" x="8" y="8" width="16" height="16"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="deleteTemplate" imagePosition="only" alignment="center" refusesFirstResponder="YES" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="dJq-44-Xaq">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="deleteMedia:" target="-2" id="ZMU-Ik-TAM"/>
+                    </connections>
+                </button>
+                <button hidden="YES" toolTip="Open in Browser" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zXk-g9-Vmq">
+                    <rect key="frame" x="126" y="8" width="16" height="16"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="webTemplate" imagePosition="only" alignment="center" refusesFirstResponder="YES" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="bMa-6S-kRu">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="openURL:" target="-2" id="fRj-ZP-ORm"/>
+                    </connections>
+                </button>
+                <button hidden="YES" toolTip="See Full-Sized Image" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="56L-Fe-ClW">
+                    <rect key="frame" x="126" y="126" width="16" height="16"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSQuickLookTemplate" imagePosition="only" alignment="center" refusesFirstResponder="YES" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="zLr-Xs-nfi">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="viewInage:" target="-2" id="W7h-cU-agR"/>
+                    </connections>
+                </button>
+                <button hidden="YES" toolTip="Like" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XVf-3K-HZq">
+                    <rect key="frame" x="33" y="79" width="20" height="20"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="favoritesTemplate" imagePosition="only" alignment="center" refusesFirstResponder="YES" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="rAx-87-ihV">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="like:" target="-2" id="weU-c7-m8i"/>
+                    </connections>
+                </button>
+                <button hidden="YES" toolTip="Comments" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pvV-D6-3xu">
+                    <rect key="frame" x="33" y="49" width="20" height="20"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="messageTemplate" imagePosition="only" alignment="center" refusesFirstResponder="YES" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="gPd-kW-xPS">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="comments:" target="-2" id="icj-bW-pps"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aJc-Yj-LQM" secondAttribute="trailing" id="G3M-9l-i0x"/>
+                <constraint firstItem="aJc-Yj-LQM" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="oHm-Ur-5KP"/>
+                <constraint firstItem="aJc-Yj-LQM" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="oLM-AU-rhd"/>
+                <constraint firstAttribute="bottom" secondItem="aJc-Yj-LQM" secondAttribute="bottom" id="xYq-zQ-YE7"/>
+            </constraints>
+            <point key="canvasLocation" x="240" y="604"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSQuickLookTemplate" width="19" height="12"/>
+        <image name="deleteTemplate" width="11" height="13"/>
+        <image name="favoritesTemplate" width="16" height="16"/>
+        <image name="messageTemplate" width="15" height="15"/>
+        <image name="webTemplate" width="16" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="IXFQueueCollectionViewItem">
+            <connections>
+                <outlet property="bottomLine" destination="2zS-r2-xwF" id="TUj-V5-TcK"/>
+                <outlet property="button" destination="Slg-W8-dFB" id="pIb-Ug-SVd"/>
+                <outlet property="profileImageView" destination="AEg-md-3jz" id="TF3-Vl-igB"/>
+                <outlet property="typeImage" destination="2OE-HV-sGN" id="jaq-ps-O2B"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView focusRingType="none" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="2zS-r2-xwF">
+                    <rect key="frame" x="0.0" y="-1" width="376" height="5"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <imageView focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x8t-1j-Jyn">
+                    <rect key="frame" x="49" y="8" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="9fL-qf-j3o"/>
+                        <constraint firstAttribute="height" constant="48" id="MyM-7T-y8o"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" id="3wB-vC-5J6"/>
+                </imageView>
+                <imageView hidden="YES" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2OE-HV-sGN" customClass="IXFImageView">
+                    <rect key="frame" x="49" y="8" width="48" height="48"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" animates="YES" imageScaling="proportionallyDown" image="videoTemplate" id="QN8-J9-BgT"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OE2-c7-k7x">
+                    <rect key="frame" x="113" y="13" width="188" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="HoJ-as-pZU"/>
+                    </constraints>
+                    <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" placeholderString="Scheduled Date" drawsBackground="YES" id="3LM-Hu-VQs">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dKl-ie-YhM">
+                    <rect key="frame" x="113" y="31" width="188" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="Osg-4t-4Qi"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" placeholderString="No Captions." drawsBackground="YES" id="UZM-oh-1Br">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textFieldCell>
+                </textField>
+                <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Slg-W8-dFB" userLabel="Menu Button">
+                    <rect key="frame" x="333" y="20" width="27" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="NZO-zW-hkZ"/>
+                        <constraint firstAttribute="width" constant="27" id="c4M-TA-qg4"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSListViewTemplate" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="Tfm-Gs-7ev">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="openMenu:" target="xL2-nQ-Aus" id="mcH-gB-Sf6"/>
+                    </connections>
+                </button>
+                <imageView focusRingType="none" translatesAutoresizingMaskIntoConstraints="NO" id="HKE-Ry-YTR" customClass="IXFImageView">
+                    <rect key="frame" x="309" y="24" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="DZq-6d-TZ1"/>
+                        <constraint firstAttribute="height" constant="16" id="XGk-gv-Kmo"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" animates="YES" imageScaling="proportionallyDown" id="RjS-wE-aDC"/>
+                </imageView>
+                <imageView focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AEg-md-3jz">
+                    <rect key="frame" x="12" y="20" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="8rI-9P-AYx"/>
+                        <constraint firstAttribute="height" constant="25" id="ayM-z2-1xY"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" id="ff9-Sc-XTA"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="2zS-r2-xwF" secondAttribute="bottom" constant="1" id="97E-Sn-kd5"/>
+                <constraint firstItem="HKE-Ry-YTR" firstAttribute="leading" secondItem="dKl-ie-YhM" secondAttribute="trailing" constant="8" id="9DY-A6-NtW"/>
+                <constraint firstItem="2zS-r2-xwF" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="AjJ-NB-N2q"/>
+                <constraint firstItem="2OE-HV-sGN" firstAttribute="leading" secondItem="AEg-md-3jz" secondAttribute="trailing" constant="12" id="BNV-Ew-Y1i"/>
+                <constraint firstItem="dKl-ie-YhM" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="16" id="PDU-LH-fqQ"/>
+                <constraint firstItem="OE2-c7-k7x" firstAttribute="top" secondItem="dKl-ie-YhM" secondAttribute="bottom" constant="4" id="Q7F-SH-bhz"/>
+                <constraint firstItem="dKl-ie-YhM" firstAttribute="leading" secondItem="x8t-1j-Jyn" secondAttribute="trailing" constant="16" id="SQT-dU-Q1Z"/>
+                <constraint firstItem="AEg-md-3jz" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="StU-L9-CdY"/>
+                <constraint firstItem="Slg-W8-dFB" firstAttribute="leading" secondItem="HKE-Ry-YTR" secondAttribute="trailing" constant="8" id="Uu2-u7-9EE"/>
+                <constraint firstAttribute="trailing" secondItem="2zS-r2-xwF" secondAttribute="trailing" id="Yf9-lT-bIl"/>
+                <constraint firstItem="AEg-md-3jz" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="a2t-Yy-vRT"/>
+                <constraint firstItem="x8t-1j-Jyn" firstAttribute="leading" secondItem="AEg-md-3jz" secondAttribute="trailing" constant="12" id="adw-aN-C2O"/>
+                <constraint firstItem="2OE-HV-sGN" firstAttribute="centerX" secondItem="x8t-1j-Jyn" secondAttribute="centerX" id="fDs-db-hf8"/>
+                <constraint firstItem="2OE-HV-sGN" firstAttribute="height" secondItem="x8t-1j-Jyn" secondAttribute="height" id="gnz-0r-1To"/>
+                <constraint firstAttribute="trailing" secondItem="Slg-W8-dFB" secondAttribute="trailing" constant="16" id="h5x-J2-E5a"/>
+                <constraint firstItem="Slg-W8-dFB" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="krN-Gd-bxS"/>
+                <constraint firstItem="OE2-c7-k7x" firstAttribute="width" secondItem="dKl-ie-YhM" secondAttribute="width" id="lI2-q4-ZdR"/>
+                <constraint firstItem="2OE-HV-sGN" firstAttribute="centerY" secondItem="x8t-1j-Jyn" secondAttribute="centerY" id="nhg-v1-3uZ"/>
+                <constraint firstItem="2OE-HV-sGN" firstAttribute="width" secondItem="x8t-1j-Jyn" secondAttribute="width" id="qMs-fn-HQO"/>
+                <constraint firstItem="OE2-c7-k7x" firstAttribute="leading" secondItem="dKl-ie-YhM" secondAttribute="leading" id="r1C-80-SDp"/>
+                <constraint firstItem="HKE-Ry-YTR" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="yuv-co-H79"/>
+                <constraint firstItem="x8t-1j-Jyn" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="zXH-BU-4ZT"/>
+            </constraints>
+            <connections>
+                <outlet property="menu" destination="jM4-3F-fgK" id="saA-Co-iGO"/>
+            </connections>
+            <point key="canvasLocation" x="68" y="443"/>
+        </customView>
+        <collectionViewItem id="xL2-nQ-Aus" customClass="IXFQueueCollectionViewItem">
+            <connections>
+                <outlet property="captionLabel" destination="dKl-ie-YhM" id="hxY-Xs-N7w"/>
+                <outlet property="dateLabel" destination="OE2-c7-k7x" id="hKZ-tv-FsA"/>
+                <outlet property="previewImageView" destination="x8t-1j-Jyn" id="Bcc-ec-Xrw"/>
+                <outlet property="profileImageView" destination="AEg-md-3jz" id="4qr-QV-l4K"/>
+                <outlet property="statusImageView" destination="HKE-Ry-YTR" id="kEA-TO-19x"/>
+                <outlet property="typeImage" destination="2OE-HV-sGN" id="niM-uK-64J"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="ths-8j-Dnt"/>
+            </connections>
+        </collectionViewItem>
+        <menu id="jM4-3F-fgK"/>
+    </objects>
+    <resources>
+        <image name="NSListViewTemplate" width="14" height="10"/>
+        <image name="videoTemplate" width="15" height="10"/>
+    </resources>
+</document>

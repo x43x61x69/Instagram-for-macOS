@@ -1,0 +1,71 @@
+//
+//  PrefixHeader.pch
+//  Inxtify
+//
+//  Copyright (C) 2016  Zhi-Wei Cai. (@x43x61x69)
+//
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+#define LOGD(...) NSLog(@"[DEBUG] " __VA_ARGS__);
+#else
+#define LOGD(...)
+#endif
+
+#define NSColorFromRGB(rgbValue) [NSColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.f green:((float)((rgbValue & 0xFF00) >> 8))/255.f blue:((float)(rgbValue & 0xFF))/255.f alpha:1.f]
+#define NSColorFromRGBA(rgbValue) [NSColor colorWithRed:((float)((rgbValue & 0xFF000000) >> 24))/255.f green:((float)((rgbValue & 0xFF0000) >> 16))/255.f blue:((float)((rgbValue & 0xFF00) >> 8))/255.f alpha:((float)(rgbValue & 0xFF))/160.f]
+
+#define kInstagramSize                  1080.f
+#define kInstagramMaxWidth              1360.f
+#define kInstagramUploadMax             kInstagramSize * 2
+#define kInstagramUploadMaxSize         NSMakeSize(kInstagramUploadMax, kInstagramUploadMax)
+
+#define kContactEmail                   @"support@vox.vg"
+#define kNewsInfoKey                    @"News"
+
+#define kFloatingMainWindowKey          @"FloatingMainWindow"
+#define kSuggestionsDisabledKey         @"SuggestionsDisabled"
+
+#define kQueuePausedKey                 @"QueuePaused"
+#define kDataSourceKey                  @"DataSource"
+#define kStatusDidChangedNotificationKey @"StatusDidChangedNotificationKey"
+
+#define kFeedItemDeleteObjectKey        @"kFeedItemDeleteObjectKey"
+
+#define kDidOpenFileNotificationKey     @"DidOpenFileNotificationKey"
+#define kOpenFileObjectKey              @"OpenFileObjectKey"
+
+#define kIXFQueueItemFileExtension      @"ixf"
+
+#define kStatisticsTotalKey             @"ST"
+#define kStatisticsImageSuccessedKey    @"SIS"
+#define kStatisticsImageFailedKey       @"SIF"
+#define kStatisticsVideoSuccessedKey    @"SVS"
+#define kStatisticsVideoFailedKey       @"SVF"
+#define kStatisticsDeleteSuccessedKey   @"SDS"
+#define kStatisticsDeleteFailedKey      @"SDF"
+
+#import <QuartzCore/QuartzCore.h>
+#import <IXFFoundation/IXFFoundation.h>
+#import "ITSwitch.h"
+
+#endif /* PrefixHeader_pch */

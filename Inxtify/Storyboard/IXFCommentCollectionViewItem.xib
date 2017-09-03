@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="IXFCommentCollectionViewItem">
+            <connections>
+                <outlet property="deleteButton" destination="btN-o2-ZJJ" id="czN-xF-wiO"/>
+                <outlet property="messageLabel" destination="rR3-YA-k9M" id="tsm-Nc-fKr"/>
+                <outlet property="profileImageView" destination="lzx-Cb-mrG" id="mCs-aC-zrg"/>
+                <outlet property="usernameLabel" destination="Q54-yB-GO8" id="Ns5-GB-rll"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView focusRingType="none" verticalCompressionResistancePriority="1000" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="47"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lzx-Cb-mrG">
+                    <rect key="frame" x="12" y="7" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="566-Up-SaW"/>
+                        <constraint firstAttribute="height" constant="32" id="Chp-fz-t4T"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="fWr-6v-FWn"/>
+                </imageView>
+                <textField focusRingType="none" horizontalHuggingPriority="1000" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q54-yB-GO8">
+                    <rect key="frame" x="50" y="15" width="66" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" focusRingType="none" alignment="right" placeholderString="username" drawsBackground="YES" id="TGe-t9-mBy">
+                        <font key="font" metaFont="systemMedium" size="13"/>
+                        <color key="textColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textFieldCell>
+                </textField>
+                <textField focusRingType="none" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="rR3-YA-k9M">
+                    <rect key="frame" x="124" y="15" width="356" height="17"/>
+                    <textFieldCell key="cell" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" focusRingType="none" alignment="left" placeholderString="message" drawsBackground="YES" id="dkE-o0-T4l">
+                        <font key="font" metaFont="systemLight" size="13"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textFieldCell>
+                </textField>
+                <button hidden="YES" toolTip="Delete" focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="btN-o2-ZJJ">
+                    <rect key="frame" x="472" y="16" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="Ivb-oN-bTB"/>
+                        <constraint firstAttribute="height" constant="16" id="lgD-qY-m2f"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="deleteTemplate" imagePosition="only" alignment="center" refusesFirstResponder="YES" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="WOb-bT-ieF">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="delete:" target="-2" id="wCS-DI-JNA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="lzx-Cb-mrG" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="8" id="Ahg-vi-MZ1"/>
+                <constraint firstItem="Q54-yB-GO8" firstAttribute="leading" secondItem="lzx-Cb-mrG" secondAttribute="trailing" constant="6" id="Aos-Ry-X03"/>
+                <constraint firstItem="btN-o2-ZJJ" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="Ghn-lC-Rex"/>
+                <constraint firstAttribute="trailing" secondItem="rR3-YA-k9M" secondAttribute="trailing" constant="20" id="TxS-hw-alA"/>
+                <constraint firstAttribute="bottom" secondItem="rR3-YA-k9M" secondAttribute="bottom" priority="999" constant="15" id="WD5-x7-Pii"/>
+                <constraint firstItem="Q54-yB-GO8" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="15" id="cy1-2O-Xri"/>
+                <constraint firstItem="lzx-Cb-mrG" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="lx8-Q8-E6t"/>
+                <constraint firstItem="rR3-YA-k9M" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="15" id="qS8-qg-gEI"/>
+                <constraint firstAttribute="trailing" secondItem="btN-o2-ZJJ" secondAttribute="trailing" constant="12" id="wCz-jJ-cUo"/>
+                <constraint firstItem="rR3-YA-k9M" firstAttribute="leading" secondItem="Q54-yB-GO8" secondAttribute="trailing" constant="8" id="yqP-n4-OcC"/>
+            </constraints>
+            <point key="canvasLocation" x="341" y="405.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="deleteTemplate" width="11" height="13"/>
+    </resources>
+</document>
